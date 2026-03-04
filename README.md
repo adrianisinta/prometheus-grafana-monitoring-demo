@@ -121,13 +121,11 @@ password: admin
 ```
 ---
 
-```markdown
 ## Grafana Dashboard
 
 Below is an example of the Grafana dashboard visualizing metrics collected by Prometheus.
 
 ![Grafana Dashboard](screenshots/dashboard.png)
-```
 ---
 
 ## Observability Concepts Demonstrated
