@@ -74,11 +74,12 @@ prometheus-grafana-monitoring-demo
 │
 └── screenshots
     └── grafana-dashboard.png
+```
 - **app/** – Simple Flask application exposing metrics  
 - **prometheus/** – Prometheus scrape configuration  
 - **docker-compose.yml** – Infrastructure orchestration  
 - **screenshots/** – Dashboard images for documentation
-```
+
 ---
 ## Running the Monitoring Stack
 
@@ -118,6 +119,7 @@ Default Grafana login:
 username: admin
 password: admin
 ```
+---
 
 ```markdown
 ## Grafana Dashboard
