@@ -19,8 +19,11 @@ The stack includes:
 - **Grafana** for metrics visualization
 - **Docker Compose** for infrastructure orchestration
 
+---
+
 ## Architecture
 
+```
            +---------------------+
            |   Developer Push    |
            +----------+----------+
@@ -49,10 +52,14 @@ The stack includes:
                            |     Grafana    |
                            |  Dashboards    |
                            +----------------+
+```
 Prometheus scrapes metrics exposed by the Flask application and stores them as time-series data. Grafana connects to Prometheus as a data source to visualize the collected metrics.
+
+---
 
 ## Project Structure
 
+```
 prometheus-grafana-monitoring-demo
 │
 ├── docker-compose.yml
@@ -71,7 +78,8 @@ prometheus-grafana-monitoring-demo
 - **prometheus/** – Prometheus scrape configuration  
 - **docker-compose.yml** – Infrastructure orchestration  
 - **screenshots/** – Dashboard images for documentation
-
+```
+---
 ## Running the Monitoring Stack
 
 ### Clone the Repository
@@ -79,27 +87,37 @@ prometheus-grafana-monitoring-demo
 ```bash
 git clone https://github.com/adrianisinta/prometheus-grafana-monitoring-demo.git
 cd prometheus-grafana-monitoring-demo
-
+```
 Start the Stack
+```
 docker compose up --build
+```
 Access the Services
 
 Flask App
 
+```
 http://localhost:5000
+```
 
 Prometheus
 
+```
 http://localhost:9090
+```
 
 Grafana
 
+```
 http://localhost:3000
+```
 
 Default Grafana login:
 
+```
 username: admin
 password: admin
+```
 
 ```markdown
 ## Grafana Dashboard
@@ -107,6 +125,8 @@ password: admin
 Below is an example of the Grafana dashboard visualizing metrics collected by Prometheus.
 
 ![Grafana Dashboard](screenshots/dashboard.png)
+```
+---
 
 ## Observability Concepts Demonstrated
 
@@ -118,6 +138,7 @@ This project demonstrates several key observability concepts used in production 
 - **Infrastructure as Code** – Docker Compose defines the monitoring stack
 - **Containerized Services** – Each component runs in isolated containers
 
+---
 ## Learning Objectives
 
 This project helped develop familiarity with:
@@ -128,6 +149,7 @@ This project helped develop familiarity with:
 - Containerized infrastructure using Docker
 - Infrastructure orchestration with Docker Compose
 
+---
 ## Future Improvements
 
 Possible enhancements include:
@@ -138,6 +160,7 @@ Possible enhancements include:
 - Deploy stack to a **cloud environment**
 - Integrate **container security scanning**
 
+---
 ## Author
 
 **Adrian Isinta**
